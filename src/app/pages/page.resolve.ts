@@ -26,7 +26,7 @@ export class PageResolve implements Resolve<any> {
       return Observable.of(this.cacheService.get(url));
     }
 
-    return this.http.get('http://www.json-generator.com/api/json/get'+url)
+    return this.http.get('/api/page'+url)
       .map(response=> response.json())
       .do(data => {
         this.cacheService.set(url,data);

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-root',
   template: `
 		<ul class="navigation">
-			<li *ngFor="let page of pages"><a [routerLink]="page.link">{{page.text}}</a></li>
+			<li *ngFor="let page of pages"><a [routerLink]="page.Url">{{page.NavigationTitle}}</a></li>
 		</ul>
 
 		<router-outlet></router-outlet>
@@ -13,21 +14,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	pages:any[];
-	constructor() {
-		this.pages = pages;
+	constructor(private http: Http) {
+    	this.getmenu().subscribe(data => this.pages = data);
 	}
-}
 
-export const pages = [{
-		text:'Forside',
-		link:'bICCgfCphK'
-	},{
-		text:'Underside 1',
-		link:'bNWdVLeJOW'
-	},{
-		text:'Underside 2',
-		link:'coDQrWQZxK'
-	},{
-		text:'Produkter',
-		link:'bUGgYdIhQi'
-	}];
+  getmenu() {
+    return this.http.get(`/api/menu`)
+    .map((res:Response) => res.json());
+  }
+}

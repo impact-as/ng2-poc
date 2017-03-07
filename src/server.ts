@@ -21,11 +21,7 @@ import { createEngine } from 'angular2-express-engine';
 // App
 import { MainModule } from './node.module';
 
-
-
-import {pages} from './app/app.component';
-
-
+var fs = require('fs');
 
 // enable prod for faster renders
 enableProdMode();
@@ -89,8 +85,15 @@ function ngApp(req, res) {
  */
 app.get('/', ngApp);
 
-pages.forEach(page => {
-  app.get('/'+page.link, ngApp);
+var PAGES = [
+  { Id:"25316857-8454-4567-ad56-507ac608385c", NavigationTitle:"Forside", Url:"/" },
+  { Id:"b3b339fc-96f7-441b-bd95-9cfb0b4d4726", NavigationTitle:"Om os", Url:"/om-os" },
+  { Id:"03361698-0ed7-4d1b-99f0-5a315d1e646e", NavigationTitle:"Service", Url:"/service" },
+  { Id:"4cd173a3-156a-4d16-bfb0-b7a711a69ac4", NavigationTitle:"Kontakt", Url:"/kontakt" }
+];
+
+PAGES.forEach(page => {
+  app.get(page.Url, ngApp);
 });
 
 
@@ -107,3 +110,18 @@ app.get('*', function(req, res) {
 let server = app.listen(app.get('port'), () => {
   console.log(`Listening on: http://localhost:${server.address().port}`);
 });
+
+
+function readJSONFile(filename, callback) {
+  fs.readFile(filename, function (err, data) {
+    if(err) {
+      callback(err);
+      return;
+    }
+    try {
+      callback(null, JSON.parse(data));
+    } catch(exception) {
+      callback(exception);
+    }
+  });
+}

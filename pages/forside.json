@@ -1,0 +1,14 @@
+{
+"MetaData": {
+    "Id":"25316857-8454-4567-ad56-507ac608385c",
+    "Name":"Forside",
+    "TemplateName":"blankpage",
+    "Url":"/",
+    "PageTitle":"POC - Forside",
+    "MetaDescription":"Verdens lækreste POC",
+    "NavigationTitle":"Forside",
+    "IncludeInNavigation":true,
+    "IncludeInSitemap":true
+    },
+"Content":[]
+}

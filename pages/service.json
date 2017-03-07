@@ -1,0 +1,14 @@
+{
+"MetaData": {
+    "Id":"03361698-0ed7-4d1b-99f0-5a315d1e646e",
+    "Name":"Service",
+    "TemplateName":"blankpage",
+    "Url":"/service",
+    "PageTitle":"POC - Service",
+    "MetaDescription":"Verdens lækreste POC",
+    "NavigationTitle":"Service",
+    "IncludeInNavigation":true,
+    "IncludeInSitemap":true
+    },
+"Content":[]
+}
