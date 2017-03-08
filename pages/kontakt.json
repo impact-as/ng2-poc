@@ -2,7 +2,7 @@
 "MetaData": {
     "Id":"4cd173a3-156a-4d16-bfb0-b7a711a69ac4",
     "Name":"Kontakt",
-    "TemplateName":"blankpage",
+    "TemplateName":"Frontpage",
     "Url":"/kontakt",
     "PageTitle":"POC - Kontakt",
     "MetaDescription":"Verdens lækreste POC",
@@ -10,5 +10,18 @@
     "IncludeInNavigation":true,
     "IncludeInSitemap":true
     },
-"Content":[]
+    "Content": [
+        {
+            "images": [
+                "http://lorempixel.com/50/50/sports/1/",
+                "http://lorempixel.com/50/50/sports/2/",
+                "http://lorempixel.com/50/50/sports/3/"
+            ],
+            "type": "gallery"
+        },
+        {
+            "content": "<h1>Content</h1><p>Content from the CMS</p>",
+            "type": "text"
+        }
+    ]
 }

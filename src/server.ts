@@ -83,28 +83,15 @@ function ngApp(req, res) {
 /**
  * use universal for specific routes
  */
-app.get('/', ngApp);
-
-var PAGES = [
-  { Id:"25316857-8454-4567-ad56-507ac608385c", NavigationTitle:"Forside", Url:"/" },
-  { Id:"b3b339fc-96f7-441b-bd95-9cfb0b4d4726", NavigationTitle:"Om os", Url:"/om-os" },
-  { Id:"03361698-0ed7-4d1b-99f0-5a315d1e646e", NavigationTitle:"Service", Url:"/service" },
-  { Id:"4cd173a3-156a-4d16-bfb0-b7a711a69ac4", NavigationTitle:"Kontakt", Url:"/kontakt" }
-];
-
-PAGES.forEach(page => {
-  app.get(page.Url, ngApp);
-});
+app.get('*', ngApp);
 
 
-
-
-app.get('*', function(req, res) {
-  res.setHeader('Content-Type', 'application/json');
-  var pojo = { status: 404, message: 'No Content' };
-  var json = JSON.stringify(pojo, null, 2);
-  res.status(404).send(json);
-});
+// app.get('*', function(req, res) {
+//   res.setHeader('Content-Type', 'application/json');
+//   var pojo = { status: 404, message: 'No Content' };
+//   var json = JSON.stringify(pojo, null, 2);
+//   res.status(404).send(json);
+// });
 
 // Server
 let server = app.listen(app.get('port'), () => {

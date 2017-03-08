@@ -2,7 +2,7 @@
 "MetaData": {
     "Id":"03361698-0ed7-4d1b-99f0-5a315d1e646e",
     "Name":"Service",
-    "TemplateName":"blankpage",
+    "TemplateName":"Frontpage",
     "Url":"/service",
     "PageTitle":"POC - Service",
     "MetaDescription":"Verdens lækreste POC",
@@ -10,5 +10,18 @@
     "IncludeInNavigation":true,
     "IncludeInSitemap":true
     },
-"Content":[]
+    "Content": [
+        {
+            "images": [
+                "http://lorempixel.com/50/50/sports/1/",
+                "http://lorempixel.com/50/50/sports/2/",
+                "http://lorempixel.com/50/50/sports/3/"
+            ],
+            "type": "gallery"
+        },
+        {
+            "content": "<h1>Content</h1><p>Content from the CMS</p>",
+            "type": "text"
+        }
+    ]
 }

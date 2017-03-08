@@ -1,14 +1,27 @@
 {
-"MetaData": {
-    "Id":"25316857-8454-4567-ad56-507ac608385c",
-    "Name":"Forside",
-    "TemplateName":"blankpage",
-    "Url":"/",
-    "PageTitle":"POC - Forside",
-    "MetaDescription":"Verdens lækreste POC",
-    "NavigationTitle":"Forside",
-    "IncludeInNavigation":true,
-    "IncludeInSitemap":true
+    "MetaData": {
+        "Id": "25316857-8454-4567-ad56-507ac608385c",
+        "Name": "Forside",
+        "TemplateName": "Frontpage",
+        "Url": "/",
+        "PageTitle": "POC - Forside",
+        "MetaDescription": "Verdens lækreste POC",
+        "NavigationTitle": "Forside",
+        "IncludeInNavigation": true,
+        "IncludeInSitemap": true
     },
-"Content":[]
+    "Content": [
+        {
+            "images": [
+                "http://lorempixel.com/50/50/sports/1/",
+                "http://lorempixel.com/50/50/sports/2/",
+                "http://lorempixel.com/50/50/sports/3/"
+            ],
+            "type": "gallery"
+        },
+        {
+            "content": "<h1>Content</h1><p>Content from the CMS</p>",
+            "type": "text"
+        }
+    ]
 }

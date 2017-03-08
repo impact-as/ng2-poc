@@ -18,9 +18,9 @@ export class GenericPageDirective {
 	ngOnChanges(changes) {
 		if(this.data) {
 			this._vcRef.clear();
-			const cf = this._cfResolver.resolveComponentFactory(PageComponents.find(component => component.ref === this.data.template));
+			const cf = this._cfResolver.resolveComponentFactory(PageComponents.find(component => component.ref === this.data.MetaData.TemplateName));
 			const _component = this._vcRef.createComponent(cf);
-			_component.instance['data'] = this.data.data;
+			_component.instance['data'] = this.data;
 		}
 	}
 }

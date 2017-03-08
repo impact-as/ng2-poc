@@ -2,7 +2,7 @@
 "MetaData": {
     "Id":"b3b339fc-96f7-441b-bd95-9cfb0b4d4726",
     "Name":"Om os",
-    "TemplateName":"blankpage",
+    "TemplateName":"Frontpage",
     "Url":"/om-os",
     "PageTitle":"POC - Om os",
     "MetaDescription":"Verdens lækreste POC",
@@ -10,5 +10,18 @@
     "IncludeInNavigation":true,
     "IncludeInSitemap":true
     },
-"Content":[]
+    "Content": [
+        {
+            "images": [
+                "http://lorempixel.com/50/50/sports/1/",
+                "http://lorempixel.com/50/50/sports/2/",
+                "http://lorempixel.com/50/50/sports/3/"
+            ],
+            "type": "gallery"
+        },
+        {
+            "content": "<h1>Content</h1><p>Content from the CMS</p>",
+            "type": "text"
+        }
+    ]
 }

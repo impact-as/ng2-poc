@@ -5,6 +5,7 @@ import { Http, Response } from '@angular/http';
   selector: 'app-root',
   template: `
 		<ul class="navigation">
+			<li><a [routerLink]="'/'">AAA</a></li>
 			<li *ngFor="let page of pages"><a [routerLink]="page.Url">{{page.NavigationTitle}}</a></li>
 		</ul>
 

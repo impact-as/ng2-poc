@@ -3,12 +3,12 @@ import { Component, Input } from '@angular/core';
 @Component({
 	selector:'frontpage',
 	template:`
-		<h1>{{data.header}}</h1>
-		<img [src]="data.heroImage" alt="" />
-
 		<div class="content">
 			<div class="full">
-				<spots [spots]="data.spots"></spots>
+				<h1>{{data.MetaData.PageTitle}}</h1>
+			</div>
+			<div class="full">
+				<spots [spots]="data.Content"></spots>
 			</div>
 		</div>
 	`

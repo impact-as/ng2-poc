@@ -21,7 +21,6 @@ export class PageResolve implements Resolve<any> {
   }
 
   public resolveUrl(url:string) {
-
     if(this.cacheService.get(url)) {
       return Observable.of(this.cacheService.get(url));
     }
