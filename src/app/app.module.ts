@@ -23,6 +23,7 @@ import { CommerceModule } from './commerce/commerce.module';
 
   	CommerceModule
   ],
+  
 })
 export class AppModule {
 }

@@ -7,9 +7,10 @@ import {SpotsComponent} from './spots.component'
 
 import { TextSpotComponent } from './text-spot.component';
 import { GallerySpotComponent } from './gallery-spot.component';
+import { UsersSpotComponent } from './users-spot.component';
 
 
-export const Spots = [TextSpotComponent, GallerySpotComponent];
+export const Spots = [TextSpotComponent, GallerySpotComponent, UsersSpotComponent];
 
 @NgModule({
 	declarations:[

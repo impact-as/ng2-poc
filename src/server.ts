@@ -76,7 +76,8 @@ function ngApp(req, res) {
     preboot: false,
     baseUrl: '/',
     requestUrl: req.originalUrl,
-    originUrl: `http://localhost:${ app.get('port') }`
+    originUrl: `http://localhost:${ app.get('port') }`,
+    async: false
   });
 }
 
@@ -97,18 +98,3 @@ app.get('*', ngApp);
 let server = app.listen(app.get('port'), () => {
   console.log(`Listening on: http://localhost:${server.address().port}`);
 });
-
-
-function readJSONFile(filename, callback) {
-  fs.readFile(filename, function (err, data) {
-    if(err) {
-      callback(err);
-      return;
-    }
-    try {
-      callback(null, JSON.parse(data));
-    } catch(exception) {
-      callback(exception);
-    }
-  });
-}

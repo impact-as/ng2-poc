@@ -22,6 +22,9 @@
         {
             "content": "<h1>Content</h1><p>Content from the CMS</p>",
             "type": "text"
+        },
+        {
+            "type":"users"
         }
     ]
 }

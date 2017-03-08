@@ -62,6 +62,16 @@ export function createTodoApi() {
       }, 0);
 
     });
+    
+  router.route('/users')
+    .get(function(req, res) {
+      // 70ms latency
+      readJSONFile('./pages/users.json', function (err, json) {
+        if(err) { throw err; }
+        res.json(json);
+      });
+
+    });
 
   router.route('/page/:id')
     .get(function(req, res) {
@@ -72,7 +82,7 @@ export function createTodoApi() {
       }
 
       readJSONFile('./pages/' + req.params.id + '.json', function (err, json) {
-        if(err) { throw err; }
+        if(err) { res.json(""); }
         res.json(json);
       });
 
