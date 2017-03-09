@@ -8,6 +8,7 @@ import {PagesModule} from './pages/pages.module';
 import {SpotsModule} from './spots/spots.module';
 
 
+
 import { CommerceModule } from './commerce/commerce.module';
 
 @NgModule({

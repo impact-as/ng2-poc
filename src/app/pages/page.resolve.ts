@@ -33,7 +33,7 @@ export class PageResolve implements Resolve<any> {
   }
 
   private sanitizeUrlSegment(url) {
-    return '/'+url.reduce((acc, segment) => {
+    return '/' + url.reduce((acc, segment) => {
       return acc+segment.path+'/';
     }, '');
   }
